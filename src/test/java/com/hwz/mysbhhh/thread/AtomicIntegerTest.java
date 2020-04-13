@@ -1,5 +1,7 @@
 package com.hwz.mysbhhh.thread;
 
+import sun.misc.Unsafe;
+
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -19,7 +21,6 @@ public class AtomicIntegerTest {
         countVolatile++;
         atomicInteger.incrementAndGet();
     }
-
     public static void main(String[] args) throws InterruptedException {
         Thread[] threads = new Thread[THREAD_COUNT];
         for (int i = 0; i < threads.length; i++) {
