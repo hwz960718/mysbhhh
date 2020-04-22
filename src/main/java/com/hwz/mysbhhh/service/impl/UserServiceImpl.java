@@ -6,6 +6,7 @@ import com.hwz.mysbhhh.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author hwz
@@ -25,5 +26,10 @@ public class UserServiceImpl implements UserService {
     public Boolean updateById(UserDO userDO) {
 
         return userDAO.updateById(userDO);
+    }
+
+    @Override
+    public List<UserDO> getUserByWrapper() {
+        return userDAO.getUserByWrapper();
     }
 }

@@ -5,6 +5,7 @@ import com.hwz.mysbhhh.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author hwz
@@ -24,5 +25,9 @@ public class UserController {
     @PutMapping("updateById")
     public Boolean updateById(@RequestBody UserDO userDO) {
         return userService.updateById(userDO);
+    }
+    @GetMapping("getUserByWrapper")
+    public List<UserDO> getUserByWrapper() {
+        return userService.getUserByWrapper();
     }
 }
