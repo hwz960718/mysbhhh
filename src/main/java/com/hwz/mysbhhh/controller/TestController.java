@@ -4,6 +4,7 @@ import com.alibaba.excel.EasyExcelFactory;
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.metadata.Sheet;
 import com.alibaba.excel.metadata.Table;
+import com.hwz.mysbhhh.enums.TestEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -54,6 +56,7 @@ public class TestController {
             List<List<String>> headList = new ArrayList<>();
             // 第 n 行 的表头
             headList.add(Collections.singletonList("标题1"));
+            headList.add(Collections.singletonList("标题4"));
             headList.add(Collections.singletonList("标题2"));
             headList.add(Collections.singletonList("标题3"));
             table.setHead(headList);
@@ -61,9 +64,11 @@ public class TestController {
             excelWriter.write1(list, sheet, table);
             // 记得 释放资源
             excelWriter.finish();
-            System.out.println("ok");
+//            System.out.println("ok");
+            log.info("ok");
         } catch (FileNotFoundException e) {
             log.error("excel文件导出失败, 失败原因：{}", e);
         }
     }
+
 }

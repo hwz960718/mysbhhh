@@ -30,6 +30,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UserDO> getUserByWrapper() {
+        System.gc();
         return userDAO.getUserByWrapper();
     }
 }
