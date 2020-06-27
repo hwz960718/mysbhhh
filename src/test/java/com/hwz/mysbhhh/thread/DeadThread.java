@@ -8,6 +8,7 @@ package com.hwz.mysbhhh.thread;
 public class DeadThread {
     private final static String resource_a = "A";
     private final static String resource_b = "B";
+    private String hwz = "hwz";
 
     private static void deadLock() {
         Thread threadA = new Thread(() -> {

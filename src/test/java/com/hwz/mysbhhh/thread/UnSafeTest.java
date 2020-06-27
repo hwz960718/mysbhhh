@@ -17,5 +17,11 @@ public class UnSafeTest {
         field.setAccessible(true);
         Unsafe unsafe = (Unsafe) field.get(null);
         System.out.println(unsafe);
+        Field field1 = DeadThread.class.getDeclaredFields()[0];
+        field1.setAccessible(true);
+        DeadThread o = (DeadThread) field.get(DeadThread.class);
+
+        System.out.println(field1.getName());
+
     }
 }
