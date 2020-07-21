@@ -14,7 +14,7 @@ public class AtomicIntegerTest {
     private static AtomicInteger atomicInteger = new AtomicInteger(0);
     private static CountDownLatch countDownLatch = new CountDownLatch(2);
 
-    public static void increase() {
+    private static void increase() {
         count++;
         countVolatile++;
         atomicInteger.incrementAndGet();
