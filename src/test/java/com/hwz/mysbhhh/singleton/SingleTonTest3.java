@@ -2,6 +2,7 @@ package com.hwz.mysbhhh.singleton;
 
 import java.io.ObjectStreamException;
 import java.io.Serializable;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 多线程双重校验
@@ -26,6 +27,7 @@ public class SingleTonTest3 implements Serializable {
             }
         }
         return singleTonTest;
+//        ConcurrentHashMap
     }
     //防止反序列化产生新对象
     private Object readResolve() throws ObjectStreamException {
