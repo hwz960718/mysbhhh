@@ -4,6 +4,7 @@ import cn.hutool.core.date.DateUtil;
 import com.alibaba.excel.support.ExcelTypeEnum;
 import com.hwz.mysbhhh.model.MedicionExcelModel;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -33,7 +34,7 @@ public class MedicineController {
                 .doWrite(Collections.singletonList(medicineExcelModel));
     }
 
-    @GetMapping("import")
+    @PostMapping("import")
     public void importVolunteerExcel(MultipartFile file) {
 
 
