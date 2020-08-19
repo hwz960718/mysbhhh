@@ -20,7 +20,7 @@ public class CountDownLatchTest2 {
     }
     static class CountRunnable implements Runnable{
         private CountDownLatch countDownLatch;
-        public CountRunnable(CountDownLatch countDownLatch){
+        public CountRunnable(CountDownLatch countDownLatch) {
             this.countDownLatch = countDownLatch;
         }
         @Override
