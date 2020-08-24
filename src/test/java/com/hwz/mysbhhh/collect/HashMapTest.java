@@ -1,5 +1,7 @@
 package com.hwz.mysbhhh.collect;
 
+import java.util.HashMap;
+
 /**
  * @author hwz
  * @date 2020/6/8
@@ -11,6 +13,7 @@ public class HashMapTest {
 //        System.out.println(20 >>> 2);
 //        System.out.println(-20 >>> 2);
 //        System.out.println(119719 >>> 16);
+
         String key = "hwz";
         //先取hash值
         int hash = key.hashCode();

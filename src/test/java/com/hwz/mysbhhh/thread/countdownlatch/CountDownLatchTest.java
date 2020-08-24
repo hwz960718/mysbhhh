@@ -1,4 +1,4 @@
-package com.hwz.mysbhhh.thread;
+package com.hwz.mysbhhh.thread.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

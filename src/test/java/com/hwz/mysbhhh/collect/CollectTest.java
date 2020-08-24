@@ -3,6 +3,7 @@ package com.hwz.mysbhhh.collect;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author hwz
@@ -10,6 +11,12 @@ import java.util.List;
  */
 public class CollectTest {
     public static void main(String[] args) {
+        List<Long> longs = new ArrayList<>();
+        List<String> collect = longs.stream().map(String::valueOf).collect(Collectors.toList());
+        String join = String.join(",", collect);
+        System.out.println(join);
+
+
         List<String> s1 = new ArrayList<>();
         List<String> s2 = new ArrayList<>();
 //        s2.add("s");
