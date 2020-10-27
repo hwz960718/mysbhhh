@@ -6,14 +6,14 @@ import java.util.HashMap;
  * @author hwz
  * @date 2020/6/8
  */
-public class HashMapTest {
+public  class HashMapTest {
     public static void main(String[] args) {
 //        System.out.println(1<<4);
 //        System.out.println(20>>2);
 //        System.out.println(20 >>> 2);
 //        System.out.println(-20 >>> 2);
 //        System.out.println(119719 >>> 16);
-
+//        HashMap
         String key = "hwz";
         //先取hash值
         int hash = key.hashCode();
@@ -23,5 +23,6 @@ public class HashMapTest {
         System.out.println(i);
         //最后进行异或运算
         System.out.println(hash^i);
+        System.out.println(13&17);
     }
 }

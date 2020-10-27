@@ -3,6 +3,7 @@ package com.hwz.mysbhhh.singleton;
 import java.io.ObjectStreamException;
 import java.io.Serializable;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 /**
  * 多线程双重校验
@@ -15,7 +16,6 @@ public class SingleTonTest3 implements Serializable {
 
     private SingleTonTest3() {
     }
-
     public static SingleTonTest3 getInstance() {
         //先判断线程是否已经创建线程实例对象
         if (singleTonTest == null){
@@ -26,6 +26,7 @@ public class SingleTonTest3 implements Serializable {
                 }
             }
         }
+//        AbstractQueuedSynchronizer
         return singleTonTest;
 //        ConcurrentHashMap
     }
